@@ -42,5 +42,62 @@ Commands:
   create   Create a shipment.
   get      Get details for a shipment.
   ls       List shipments.
+  rm       Delete a shipment.
   version  Show the version information.
+```
+
+### Create a Shipment
+
+```console
+$ ship create -h
+Usage: ship create [OPTIONS] TRACKING_NUMBER
+
+Create a shipment.
+
+Flags:
+
+  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d       enable debug logging (default: false)
+```
+
+### Get a Shipment
+
+```console
+$ ship get -h
+Usage: ship get [OPTIONS] TRACKING_NUMBER
+
+Get details for a shipment.
+
+Flags:
+
+  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d       enable debug logging (default: false)
+```
+
+### List Shipments
+
+```console
+$ ship ls -h
+Usage: ship ls 
+
+List shipments.
+
+Flags:
+
+  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d       enable debug logging (default: false)
+```
+
+### Delete a Shipment
+
+```console
+$ ship rm -h
+Usage: ship rm [OPTIONS] TRACKING_NUMBER
+
+Delete a shipment.
+
+Flags:
+
+  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d       enable debug logging (default: false)
 ```

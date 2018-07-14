@@ -71,3 +71,15 @@ func (c *Client) PostTracking(tracking Tracking) (Tracking, error) {
 	// Return the first tracking as that should be ours.
 	return data.Trackings[0], nil
 }
+
+// DeleteTracking deletes a specific tracking.
+// From: https://docs.aftership.com/api/4/trackings/delete-trackings
+func (c *Client) DeleteTracking(tracking Tracking) error {
+	_, err := c.doRequest(
+		http.MethodDelete,
+		fmt.Sprintf("%s/%s/%s", TrackingsEndpoint, tracking.Slug, tracking.TrackingNumber),
+		nil,
+	)
+
+	return err
+}

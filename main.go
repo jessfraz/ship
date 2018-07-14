@@ -34,6 +34,7 @@ func main() {
 		&createCommand{},
 		&getCommand{},
 		&listCommand{},
+		&removeCommand{},
 		&versionCommand{},
 	}
 
