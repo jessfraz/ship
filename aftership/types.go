@@ -19,6 +19,7 @@ type Data struct {
 	Couriers     []Courier    `json:"couriers,omitempty"`
 	Notification Notification `json:"notification,omitempty"`
 	Trackings    []Tracking   `json:"trackings,omitempty"`
+	Tracking     Tracking     `json:"tracking,omitempty"`
 }
 
 // Meta defines the data struct for the metadata.

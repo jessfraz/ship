@@ -40,6 +40,7 @@ Usage: ship <command>
 Commands:
 
   create   Create a shipment.
+  get      Get details for a shipment.
   ls       List shipments.
   version  Show the version information.
 ```

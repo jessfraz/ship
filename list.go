@@ -27,8 +27,9 @@ func (cmd *listCommand) Run(c *aftership.Client, args []string) error {
 		logrus.Fatal(err)
 	}
 
-	for _, tracking := range trackings {
-		prettyPrintTracking(tracking)
+	// Go backwards over the trackings so that the order is from most recent to least recent.
+	for i := len(trackings) - 1; i >= 0; i-- {
+		prettyPrintTracking(trackings[i], false)
 		fmt.Println()
 	}
 
