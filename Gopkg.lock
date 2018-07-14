@@ -2,14 +2,6 @@
 
 
 [[projects]]
-  digest = "1:67e5b349f95cc2c133fbd1190bf1d1109b11d358909bc8ca9514b438264840c8"
-  name = "github.com/genuinetools/apk-file"
-  packages = ["version"]
-  pruneopts = "NU"
-  revision = "c7815d6ddd80b0c8213404d4bf589ec84f21a4fa"
-  version = "v0.3.1"
-
-[[projects]]
   digest = "1:fb851541f5df335edb55ae691842a09ba4397bbf2deec9f7c5ad4a49de3fa44d"
   name = "github.com/sirupsen/logrus"
   packages = ["."]
@@ -39,9 +31,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = [
-    "github.com/genuinetools/apk-file/version",
-    "github.com/sirupsen/logrus",
-  ]
+  input-imports = ["github.com/sirupsen/logrus"]
   solver-name = "gps-cdcl"
   solver-version = 1
