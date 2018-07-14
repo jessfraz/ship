@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"flag"
+	"fmt"
 
 	"github.com/jessfraz/ship/aftership"
 	"github.com/sirupsen/logrus"
@@ -45,5 +46,6 @@ func (cmd *removeCommand) Run(c *aftership.Client, args []string) error {
 		logrus.Fatal(err)
 	}
 
+	fmt.Printf("Deleted shipment for tracking number: %s\n", args[0])
 	return nil
 }
