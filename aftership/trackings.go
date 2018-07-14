@@ -21,10 +21,18 @@ func (c *Client) GetTrackings() ([]Tracking, error) {
 	return data.Trackings, nil
 }
 
+type trackingRequest struct {
+	Tracking Tracking `json:"tracking"`
+}
+
 // PostTracking creates a new tracking.
 // From: https://docs.aftership.com/api/4/trackings/get-trackings
 func (c *Client) PostTracking(tracking Tracking) (Tracking, error) {
-	data, err := c.doRequest(http.MethodPost, TrackingsEndpoint, tracking)
+	data, err := c.doRequest(
+		http.MethodPost,
+		TrackingsEndpoint,
+		trackingRequest{Tracking: tracking},
+	)
 	if err != nil {
 		return Tracking{}, err
 	}

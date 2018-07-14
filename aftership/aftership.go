@@ -93,7 +93,7 @@ func (c *Client) doRequest(method, endpoint string, data interface{}) (*Data, er
 	}
 
 	// Return errors on the API errors.
-	if resp.StatusCode != http.StatusOK {
+	if resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusCreated {
 		return &r.Data, fmt.Errorf("API error %s [%d]: %s", r.Meta.Type, r.Meta.Code, r.Meta.Message)
 	}
 
