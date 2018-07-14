@@ -1,6 +1,7 @@
 package aftership
 
 import (
+	"strings"
 	"time"
 )
 
@@ -50,8 +51,8 @@ type Tracking struct {
 
 	Language string `json:"language,omitempty"`
 
-	CreatedAt time.Time `json:"created_at,omitempty"`
-	UpdatedAt time.Time `json:"updated_at,omitempty"`
+	CreatedAt TimeJSON `json:"created_at,omitempty"`
+	UpdatedAt TimeJSON `json:"updated_at,omitempty"`
 
 	TrackingAccountNumber string `json:"tracking_account_number,omitempty"`
 	TrackingPostalCode    string `json:"tracking_postal_code,omitempty"`
@@ -83,8 +84,8 @@ type CheckPoint struct {
 	Tag     string `json:"tag,omitempty"`
 	Message string `json:"message,omitempty"`
 
-	CreatedAt      time.Time `json:"created_at,omitempty"`
-	CheckPointTime time.Time `json:"checkpoint_time,omitempty"`
+	CreatedAt      TimeJSON `json:"created_at,omitempty"`
+	CheckPointTime TimeJSON `json:"checkpoint_time,omitempty"`
 
 	City        string   `json:"city,omitempty"`
 	State       string   `json:"state,omitempty"`
@@ -116,4 +117,29 @@ type Courier struct {
 
 	RequiredFields []string `json:"required_fields,omitempty"`
 	OptionalFields []string `json:"optional_fields,omitempty"`
+}
+
+// TimeJSON is the time format returned by the AfterShip API.
+type TimeJSON struct {
+	time.Time
+}
+
+// UnmarshalJSON sets the TimeJSON correctly from a string.
+func (t *TimeJSON) UnmarshalJSON(b []byte) error {
+	s := strings.Trim(strings.TrimSpace(string(b)), `"`)
+
+	// The time format is not universal for all responses... oye.
+	format := "2006-01-02T15:04:05-07:00"
+	if !strings.Contains(s, "+") && strings.Count(s, "-") < 3 {
+		format = "2006-01-02T15:04:05"
+	}
+
+	i, err := time.Parse(format, s)
+	if err != nil {
+		return err
+	}
+
+	*t = TimeJSON{i}
+
+	return nil
 }

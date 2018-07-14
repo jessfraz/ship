@@ -34,22 +34,11 @@ $ docker run --rm -it \
 ## Usage
 
 ```console
-$ ship -h
-     _     _
- ___| |__ (_)_ __
-/ __| '_ \| | '_ \
-\__ \ | | | | |_) |
-|___/_| |_|_| .__/
-            |_|
+$ ship help
+Usage: ship <command>
 
- Command line tool for tracking packages using the AfterShip API.
- Version: v0.0.0
- Build: 
+Commands:
 
-  -apikey string
-        AfterShip API Key (or env var AFTERSHIP_API_KEY) 
-  -d    run in debug mode
-  -v    print version and exit (shorthand)
-  -version
-        print version and exit
+  ls       List shipments.
+  version  Show the version information.
 ```
