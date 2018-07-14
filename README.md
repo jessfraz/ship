@@ -9,11 +9,11 @@ Command line tool to track packages using the
 
 #### Binaries
 
-- **darwin** [386](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-darwin-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-darwin-amd64)
-- **freebsd** [386](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-freebsd-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-freebsd-amd64)
-- **linux** [386](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-linux-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-linux-amd64) / [arm](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-linux-arm) / [arm64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-linux-arm64)
-- **solaris** [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-solaris-amd64)
-- **windows** [386](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-windows-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.3/ship-windows-amd64)
+- **darwin** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-amd64)
+- **freebsd** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-amd64)
+- **linux** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-amd64) / [arm](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-arm) / [arm64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-arm64)
+- **solaris** [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-solaris-amd64)
+- **windows** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-windows-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-windows-amd64)
 
 #### Via Go
 
