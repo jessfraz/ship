@@ -4,10 +4,12 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"strings"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/fatih/color"
 	"github.com/jessfraz/ship/aftership"
+	"github.com/sirupsen/logrus"
 )
 
 const createHelp = `Create a shipment.`
@@ -37,6 +39,11 @@ func (cmd *createCommand) Run(c *aftership.Client, args []string) error {
 		logrus.Fatal(err)
 	}
 
+	if len(tracking.TrackingNumber) <= 0 {
+		fmt.Printf("Created shipment for tracking number: %s\n", args[0])
+		return nil
+	}
+
 	prettyPrintTracking(tracking)
 
 	return nil
@@ -46,8 +53,8 @@ func prettyPrintTracking(tracking aftership.Tracking) {
 	fmt.Printf(`%s (%s) - %s
 `,
 		tracking.TrackingNumber,
-		tracking.Slug,
-		tracking.Tag,
+		strings.ToUpper(tracking.Slug),
+		printTag(tracking.Tag),
 	)
 
 	// Go backwards over the checkpoints so that the order is from most recent to least recent.
@@ -64,10 +71,33 @@ func prettyPrintTracking(tracking aftership.Tracking) {
         %s
       %s
 `,
-			tracking.Checkpoints[i].Tag,
+			printTag(tracking.Checkpoints[i].Tag),
 			location,
 			tracking.Checkpoints[i].Message,
 			tracking.Checkpoints[i].CheckPointTime.Local().Format(time.RFC1123),
 		)
 	}
+}
+
+// Statuses come from: https://docs.aftership.com/api/4/delivery-status
+func printTag(tag string) string {
+	switch tag {
+	case "InTransit":
+		return color.YellowString(tag)
+	case "Delivered":
+		return color.GreenString(tag)
+	case "OutForDelivery":
+		return color.CyanString(tag)
+	case "InfoReceived":
+		return color.BlueString(tag)
+	case "Exception":
+		return color.MagentaString(tag)
+	case "FailedAttempt":
+		return color.RedString(tag)
+	case "Expired":
+		return color.MagentaString(tag)
+	case "Pending":
+		return color.HiWhiteString(tag)
+	}
+	return color.WhiteString(tag)
 }

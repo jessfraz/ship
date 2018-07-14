@@ -39,7 +39,7 @@ func (c *Client) PostTracking(tracking Tracking) (Tracking, error) {
 
 	// Check if we didn't get a result and return an error if true.
 	if data == nil || len(data.Trackings) <= 0 {
-		return Tracking{}, ErrorEmptyResult
+		return Tracking{}, nil
 	}
 
 	// We should not receive more than one tracking.

@@ -2,9 +2,10 @@ package main
 
 import (
 	"flag"
+	"fmt"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/jessfraz/ship/aftership"
+	"github.com/sirupsen/logrus"
 )
 
 const listHelp = `List shipments.`
@@ -28,6 +29,7 @@ func (cmd *listCommand) Run(c *aftership.Client, args []string) error {
 
 	for _, tracking := range trackings {
 		prettyPrintTracking(tracking)
+		fmt.Println()
 	}
 
 	return nil
