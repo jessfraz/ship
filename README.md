@@ -1,13 +1,14 @@
 # ship
 
-[![Travis CI](https://travis-ci.org/jessfraz/ship.svg?branch=master)](https://travis-ci.org/jessfraz/ship)
-
-Command line tool to track packages using the 
-[AfterShip API](https://docs.aftership.com/api/4/overview).
+[![Travis CI](https://img.shields.io/travis/jessfraz/ship.svg?style=for-the-badge)](https://travis-ci.org/jessfraz/ship)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/ship)
+[![Github All Releases](https://img.shields.io/github/downloads/jessfraz/ship/total.svg?style=for-the-badge)](https://github.com/jessfraz/ship/releases)
 
 ## Installation
 
 #### Binaries
+
+For installation instructions from binaries please visit the [Releases Page](https://github.com/jessfraz/ship/releases).
 
 - **darwin** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-amd64)
 - **freebsd** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-amd64)
