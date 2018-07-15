@@ -6,6 +6,16 @@
 
 Command line tool to track packages using the [AfterShip API](https://docs.aftership.com/api/4/overview).
 
+- [Installation](#installation)
+    + [Binaries](#binaries)
+    + [Via Go](#via-go)
+    + [Running with Docker](#running-with-docker)
+- [Usage](#usage)
+  * [Create a Shipment](#create-a-shipment)
+  * [Get a Shipment](#get-a-shipment)
+  * [List Shipments](#list-shipments)
+  * [Delete a Shipment](#delete-a-shipment)
+
 ## Installation
 
 #### Binaries
@@ -37,8 +47,15 @@ $ docker run --rm -it \
 ## Usage
 
 ```console
-$ ship help
+$ ship -h
+ship -  Command line tool to track packages using the AfterShip API.
+
 Usage: ship <command>
+
+Flags:
+
+  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d       enable debug logging (default: false)
 
 Commands:
 
