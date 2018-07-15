@@ -53,7 +53,7 @@ func prettyPrintTracking(tracking aftership.Tracking, all bool) {
 	fmt.Printf(`%s (%s) - %s
 `,
 		tracking.TrackingNumber,
-		color.HiBlueString(strings.ToUpper(tracking.Slug)),
+		color.HiBlackString(strings.ToUpper(tracking.Slug)),
 		printTag(tracking.Tag),
 	)
 
@@ -74,7 +74,7 @@ func prettyPrintTracking(tracking aftership.Tracking, all bool) {
 			printTag(tracking.Checkpoints[i].Tag),
 			location,
 			tracking.Checkpoints[i].Message,
-			color.HiCyanString(tracking.Checkpoints[i].CheckPointTime.Local().Format(time.RFC1123)),
+			color.BlackString(tracking.Checkpoints[i].CheckPointTime.Local().Format(time.RFC1123)),
 		)
 		// If we don't want to print all the checkpoints set i=0 so we don't..
 		if !all {
