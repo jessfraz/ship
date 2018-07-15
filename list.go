@@ -1,10 +1,10 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 
-	"github.com/jessfraz/ship/aftership"
 	"github.com/sirupsen/logrus"
 )
 
@@ -20,9 +20,9 @@ func (cmd *listCommand) Register(fs *flag.FlagSet) {}
 
 type listCommand struct{}
 
-func (cmd *listCommand) Run(c *aftership.Client, args []string) error {
+func (cmd *listCommand) Run(ctx context.Context, args []string) error {
 	// Get the trackings.
-	trackings, err := c.GetTrackings()
+	trackings, err := client.GetTrackings()
 	if err != nil {
 		logrus.Fatal(err)
 	}

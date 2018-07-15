@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"flag"
 	"fmt"
@@ -24,13 +25,13 @@ func (cmd *createCommand) Register(fs *flag.FlagSet) {}
 
 type createCommand struct{}
 
-func (cmd *createCommand) Run(c *aftership.Client, args []string) error {
+func (cmd *createCommand) Run(ctx context.Context, args []string) error {
 	if len(args) < 1 {
 		return errors.New("must pass a tracking number")
 	}
 
 	// Create the tracking.
-	tracking, err := c.PostTracking(
+	tracking, err := client.PostTracking(
 		aftership.Tracking{
 			TrackingNumber: args[0],
 		},

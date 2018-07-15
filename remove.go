@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"flag"
 	"fmt"
@@ -21,13 +22,13 @@ func (cmd *removeCommand) Register(fs *flag.FlagSet) {}
 
 type removeCommand struct{}
 
-func (cmd *removeCommand) Run(c *aftership.Client, args []string) error {
+func (cmd *removeCommand) Run(ctx context.Context, args []string) error {
 	if len(args) < 1 {
 		return errors.New("must pass a tracking number")
 	}
 
 	// remove the courier slug.
-	courier, err := c.DetectCourier(
+	courier, err := client.DetectCourier(
 		aftership.Tracking{
 			TrackingNumber: args[0],
 		},
@@ -37,7 +38,7 @@ func (cmd *removeCommand) Run(c *aftership.Client, args []string) error {
 	}
 
 	// Delete the tracking.
-	if err := c.DeleteTracking(
+	if err := client.DeleteTracking(
 		aftership.Tracking{
 			Slug:           courier.Slug,
 			TrackingNumber: args[0],

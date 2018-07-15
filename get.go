@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"flag"
 
@@ -20,13 +21,13 @@ func (cmd *getCommand) Register(fs *flag.FlagSet) {}
 
 type getCommand struct{}
 
-func (cmd *getCommand) Run(c *aftership.Client, args []string) error {
+func (cmd *getCommand) Run(ctx context.Context, args []string) error {
 	if len(args) < 1 {
 		return errors.New("must pass a tracking number")
 	}
 
 	// Get the courier slug.
-	courier, err := c.DetectCourier(
+	courier, err := client.DetectCourier(
 		aftership.Tracking{
 			TrackingNumber: args[0],
 		},
@@ -36,7 +37,7 @@ func (cmd *getCommand) Run(c *aftership.Client, args []string) error {
 	}
 
 	// Get the tracking.
-	tracking, err := c.GetTracking(
+	tracking, err := client.GetTracking(
 		aftership.Tracking{
 			Slug:           courier.Slug,
 			TrackingNumber: args[0],

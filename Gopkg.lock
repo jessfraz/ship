@@ -10,6 +10,14 @@
   version = "v1.7.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:c83552fbca546c465c78d70643437b9611ef0b76c8cac5ce4b79111c79b7d1da"
+  name = "github.com/genuinetools/pkg"
+  packages = ["cli"]
+  pruneopts = "NU"
+  revision = "ece12075e4b9a2c74a7303b7d546fd8c957be3bd"
+
+[[projects]]
   digest = "1:c058c06b10db9e154e3385877da505455c13283e784f7d0d78efcbfe579cc766"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
@@ -50,13 +58,14 @@
     "windows",
   ]
   pruneopts = "NU"
-  revision = "1b2967e3c290b7c545b3db0deeda16e9be4f98a2"
+  revision = "ac767d655b305d4e9612f5f6e33120b9176c4ad4"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/fatih/color",
+    "github.com/genuinetools/pkg/cli",
     "github.com/sirupsen/logrus",
   ]
   solver-name = "gps-cdcl"
