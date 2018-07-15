@@ -4,6 +4,8 @@
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/ship)
 [![Github All Releases](https://img.shields.io/github/downloads/jessfraz/ship/total.svg?style=for-the-badge)](https://github.com/jessfraz/ship/releases)
 
+Command line tool to track packages using the [AfterShip API](https://docs.aftership.com/api/4/overview).
+
 ## Installation
 
 #### Binaries
