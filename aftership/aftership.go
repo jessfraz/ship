@@ -43,7 +43,7 @@ func (c *Client) doRequest(method, endpoint string, data interface{}) (*Data, er
 	}
 
 	// Set the correct headers.
-	req.Header.Set("aftership-api-key", c.apiKey)
+	req.Header.Set(APIKeyHeader, c.apiKey)
 	req.Header.Set("Content-Type", "application/json")
 
 	// Do the request.
