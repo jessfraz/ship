@@ -18,39 +18,39 @@ jobs:
       deploy:
         provider: releases
         file:
-          - cross/ship-linux-amd64.md5
-          - cross/ship-windows-386.sha256
-          - cross/ship-linux-arm
-          - cross/ship-darwin-amd64.md5
           - cross/ship-darwin-amd64
-          - cross/ship-solaris-amd64.md5
-          - cross/ship-linux-arm64.sha256
-          - cross/ship-linux-arm.sha256
-          - cross/ship-linux-386.sha256
+          - cross/ship-darwin-amd64.md5
+          - cross/ship-darwin-amd64.sha256
+          - cross/ship-darwin-386
           - cross/ship-darwin-386.md5
-          - cross/ship-windows-386.md5
+          - cross/ship-darwin-386.sha256
+          - cross/ship-freebsd-amd64
           - cross/ship-freebsd-amd64.md5
-          - cross/ship-linux-arm64.md5
-          - cross/ship-linux-arm64
           - cross/ship-freebsd-amd64.sha256
-          - cross/ship-freebsd-386.md5
-          - cross/ship-linux-amd64.sha256
-          - cross/ship-linux-386.md5
           - cross/ship-freebsd-386
+          - cross/ship-freebsd-386.md5
+          - cross/ship-freebsd-386.sha256
+          - cross/ship-linux-arm
+          - cross/ship-linux-arm.md5
+          - cross/ship-linux-arm.sha256
+          - cross/ship-linux-arm64
+          - cross/ship-linux-arm64.md5
+          - cross/ship-linux-arm64.sha256
+          - cross/ship-linux-amd64
+          - cross/ship-linux-amd64.md5
+          - cross/ship-linux-amd64.sha256
+          - cross/ship-linux-386
+          - cross/ship-linux-386.md5
+          - cross/ship-linux-386.sha256
+          - cross/ship-solaris-amd64
+          - cross/ship-solaris-amd64.md5
           - cross/ship-solaris-amd64.sha256
           - cross/ship-windows-amd64
           - cross/ship-windows-amd64.md5
           - cross/ship-windows-amd64.sha256
-          - cross/ship-linux-arm.md5
-          - cross/ship-darwin-386.sha256
-          - cross/ship-darwin-amd64.sha256
           - cross/ship-windows-386
-          - cross/ship-solaris-amd64
-          - cross/ship-darwin-386
-          - cross/ship-linux-386
-          - cross/ship-freebsd-amd64
-          - cross/ship-freebsd-386.sha256
-          - cross/ship-linux-amd64
+          - cross/ship-windows-386.md5
+          - cross/ship-windows-386.sha256
         skip_cleanup: true
         on:
           tags: true

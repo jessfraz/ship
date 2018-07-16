@@ -22,15 +22,9 @@ Command line tool to track packages using the [AfterShip API](https://docs.after
 
 For installation instructions from binaries please visit the [Releases Page](https://github.com/jessfraz/ship/releases).
 
-- **darwin** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-darwin-amd64)
-- **freebsd** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-freebsd-amd64)
-- **linux** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-amd64) / [arm](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-arm) / [arm64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-linux-arm64)
-- **solaris** [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-solaris-amd64)
-- **windows** [386](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-windows-386) / [amd64](https://github.com/jessfraz/ship/releases/download/v0.0.4/ship-windows-amd64)
-
 #### Via Go
 
-```bash
+```console
 $ go get github.com/jessfraz/ship
 ```
 
@@ -54,8 +48,8 @@ Usage: ship <command>
 
 Flags:
 
-  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
-  -d       enable debug logging (default: false)
+  -d        enable debug logging (default: false)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: 8804323a-3719-43da-9d34-5ead782c3e36)
 
 Commands:
 
@@ -76,8 +70,8 @@ Create a shipment.
 
 Flags:
 
-  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
-  -d       enable debug logging (default: false)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d        enable debug logging (default: false)
 ```
 
 ### Get a Shipment
@@ -90,8 +84,8 @@ Get details for a shipment.
 
 Flags:
 
-  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
-  -d       enable debug logging (default: false)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d        enable debug logging (default: false)
 ```
 
 ### List Shipments
@@ -104,8 +98,8 @@ List shipments.
 
 Flags:
 
-  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
-  -d       enable debug logging (default: false)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d        enable debug logging (default: false)
 ```
 
 ### Delete a Shipment
@@ -118,6 +112,6 @@ Delete a shipment.
 
 Flags:
 
-  -apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
-  -d       enable debug logging (default: false)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  -d        enable debug logging (default: false)
 ```
