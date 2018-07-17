@@ -132,7 +132,11 @@ func (t *TimeJSON) UnmarshalJSON(b []byte) error {
 	// The time format is not universal for all responses... oye.
 	format := "2006-01-02T15:04:05-07:00"
 	if !strings.Contains(s, "+") && strings.Count(s, "-") < 3 {
-		format = "2006-01-02T15:04:05"
+		if strings.HasSuffix(s, "Z") {
+			format = "2006-01-02T15:04:05Z"
+		} else {
+			format = "2006-01-02T15:04:05"
+		}
 	}
 
 	i, err := time.Parse(format, s)
