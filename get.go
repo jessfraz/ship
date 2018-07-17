@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"flag"
+	"fmt"
 	"strings"
 
 	"github.com/jessfraz/ship/aftership"
@@ -46,6 +47,10 @@ func (cmd *getCommand) Run(ctx context.Context, args []string) error {
 		}
 
 		cmd.slug = courier.Slug
+	}
+
+	if len(cmd.slug) < 1 {
+		return fmt.Errorf("could not identify courier slug for tracking number %s", args[0])
 	}
 
 	// Get the tracking.

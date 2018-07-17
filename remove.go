@@ -49,6 +49,10 @@ func (cmd *removeCommand) Run(ctx context.Context, args []string) error {
 		cmd.slug = courier.Slug
 	}
 
+	if len(cmd.slug) < 1 {
+		return fmt.Errorf("could not identify courier slug for tracking number %s", args[0])
+	}
+
 	// Delete the tracking.
 	if err := client.DeleteTracking(
 		aftership.Tracking{
