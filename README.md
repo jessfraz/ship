@@ -49,7 +49,7 @@ Usage: ship <command>
 Flags:
 
   -d        enable debug logging (default: false)
-  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: 8804323a-3719-43da-9d34-5ead782c3e36)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: <none>)
 
 Commands:
 
@@ -70,7 +70,7 @@ Create a shipment.
 
 Flags:
 
-  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: <none>)
   -d        enable debug logging (default: false)
 ```
 
@@ -84,7 +84,7 @@ Get details for a shipment.
 
 Flags:
 
-  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: <none>)
   -d        enable debug logging (default: false)
 ```
 
@@ -98,7 +98,7 @@ List shipments.
 
 Flags:
 
-  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: <none>)
   -d        enable debug logging (default: false)
 ```
 
@@ -112,6 +112,6 @@ Delete a shipment.
 
 Flags:
 
-  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY)
+  --apikey  AfterShip API Key (or env var AFTERSHIP_API_KEY) (default: <none>)
   -d        enable debug logging (default: false)
 ```
