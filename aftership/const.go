@@ -31,5 +31,5 @@ const (
 
 var (
 	// ErrorEmptyResult defines the error when the result is empty.
-	ErrorEmptyResult = errors.New("Empty result")
+	ErrorEmptyResult = errors.New("empty result")
 )
