@@ -1,6 +1,7 @@
 # ship
 
-[![Travis CI](https://img.shields.io/travis/jessfraz/ship.svg?style=for-the-badge)](https://travis-ci.org/jessfraz/ship)
+[![make-all](https://github.com/jessfraz/ship/workflows/make%20all/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+all%22)
+[![make-image](https://github.com/jessfraz/ship/workflows/make%20image/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+image%22)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/ship)
 [![Github All Releases](https://img.shields.io/github/downloads/jessfraz/ship/total.svg?style=for-the-badge)](https://github.com/jessfraz/ship/releases)
 
