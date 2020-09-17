@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [ship](#ship)
+  - [Installation](#installation)
+      - [Binaries](#binaries)
+      - [Via Go](#via-go)
+      - [Running with Docker](#running-with-docker)
+  - [Usage](#usage)
+    - [Create a Shipment](#create-a-shipment)
+    - [Get a Shipment](#get-a-shipment)
+    - [List Shipments](#list-shipments)
+    - [Delete a Shipment](#delete-a-shipment)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # ship
 
 [![make-all](https://github.com/jessfraz/ship/workflows/make%20all/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+all%22)
