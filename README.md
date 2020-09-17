@@ -1,3 +1,12 @@
+# ship
+
+[![make-all](https://github.com/jessfraz/ship/workflows/make%20all/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+all%22)
+[![make-image](https://github.com/jessfraz/ship/workflows/make%20image/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+image%22)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/ship)
+[![Github All Releases](https://img.shields.io/github/downloads/jessfraz/ship/total.svg?style=for-the-badge)](https://github.com/jessfraz/ship/releases)
+
+Command line tool to track packages using the [AfterShip API](https://docs.aftership.com/api/4/overview).
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -15,30 +24,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# ship
-
-[![make-all](https://github.com/jessfraz/ship/workflows/make%20all/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+all%22)
-[![make-image](https://github.com/jessfraz/ship/workflows/make%20image/badge.svg)](https://github.com/jessfraz/ship/actions?query=workflow%3A%22make+image%22)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/ship)
-[![Github All Releases](https://img.shields.io/github/downloads/jessfraz/ship/total.svg?style=for-the-badge)](https://github.com/jessfraz/ship/releases)
-
-Command line tool to track packages using the [AfterShip API](https://docs.aftership.com/api/4/overview).
-
-**Table of Contents**
-
-<!-- toc -->
-
-- [Installation](#installation)
-    + [Binaries](#binaries)
-    + [Via Go](#via-go)
-    + [Running with Docker](#running-with-docker)
-- [Usage](#usage)
-  * [Create a Shipment](#create-a-shipment)
-  * [Get a Shipment](#get-a-shipment)
-  * [List Shipments](#list-shipments)
-  * [Delete a Shipment](#delete-a-shipment)
-
-<!-- tocstop -->
 
 ## Installation
 
