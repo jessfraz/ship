@@ -11,16 +11,15 @@ Command line tool to track packages using the [AfterShip API](https://docs.after
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [ship](#ship)
-  - [Installation](#installation)
-      - [Binaries](#binaries)
-      - [Via Go](#via-go)
-      - [Running with Docker](#running-with-docker)
-  - [Usage](#usage)
-    - [Create a Shipment](#create-a-shipment)
-    - [Get a Shipment](#get-a-shipment)
-    - [List Shipments](#list-shipments)
-    - [Delete a Shipment](#delete-a-shipment)
+- [Installation](#installation)
+    - [Binaries](#binaries)
+    - [Via Go](#via-go)
+    - [Running with Docker](#running-with-docker)
+- [Usage](#usage)
+  - [Create a Shipment](#create-a-shipment)
+  - [Get a Shipment](#get-a-shipment)
+  - [List Shipments](#list-shipments)
+  - [Delete a Shipment](#delete-a-shipment)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
